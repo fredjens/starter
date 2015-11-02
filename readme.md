@@ -1,8 +1,10 @@
 # Starter
 
+* Gulp + Browsersync
 * Bower for frontend dependencies
+* Sassdoc
 
-Install node js ```brew install node``` 
-Install dependencies ```npm i```
+Install: ```npm i```
 
-Run project ```gulp up```# netlife-starter
+Run: ```gulp up```
+
