@@ -1,0 +1,54 @@
+////
+/// @author Netlife Research
+/// @group Settings
+////
+
+//------------------------------------------------------
+// Colors
+//------------------------------------------------------
+
+$color-primary    : seagreen;
+$color-secondary  : blue;
+$color-black      : #000;
+$color-white      : #fff;
+$color-gray       : #333;
+$text-color		    : $color-gray;
+
+
+//------------------------------------------------------
+// Breakpoints and grid
+//------------------------------------------------------
+
+$breakpoints: (
+  small: 480px,
+  medium: 720px,
+  large: 960px,
+  wide: 1200px
+);
+
+$susy: (
+  columns: 6,
+  math: fluid,
+  gutters: 44px/151px, // Margin 67 Gutter 44
+  gutter-position: inside-static,
+  global-box-sizing: border-box,
+  //debug: (image: show)
+);
+
+
+//------------------------------------------------------
+// Spacing
+//------------------------------------------------------
+
+$spacing 		    : 20px;
+$spacing-small	: 10px;
+$spacing-medium	: 30px;
+$spacing-large	: 50px;
+
+//------------------------------------------------------
+// Typograhpy
+//------------------------------------------------------
+
+$font-sans		: "Helvetica", sans-serif;
+$font-sans-bold	: "Helvetica", sans-serif;
+

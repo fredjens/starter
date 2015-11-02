@@ -1,0 +1,74 @@
+////
+/// @author Netlife Research
+/// @group Typography
+////
+
+//------------------------------------------------------
+// TYPOGRAPHY
+//------------------------------------------------------
+
+body {
+	margin: 0;
+	padding: 0;
+	padding: 20px;
+	font-size: 16px; 
+	font-weight: 400;
+	line-height: 1.5;
+	color: $text-color;
+	text-rendering: optimizeLegibility;
+	//-webkit-font-smoothing: antialiased;
+	//-moz-osx-font-smoothing: grayscale;
+	background: $color-primary;
+}
+
+/// H1 user for frontpage
+$h1-font-sizes: (
+	null  	:2rem,
+	small 	:5rem,
+	medium	:6rem
+);	
+
+/// H1 styiling
+h1 {
+	@include font-size($h1-font-sizes);
+	font-weight: 600;
+	line-height: 1.5;
+	margin-top: 0;
+}
+
+$h2-font-sizes: (
+	null  	:1rem,
+	medium	:1.3rem
+);	
+
+h2, h3 {
+	@include font-size($h2-font-sizes);
+	font-style: italic;
+	font-weight: 100;
+	letter-spacing: 3px;
+	margin-bottom: 6px;
+}
+
+p {
+	margin-top: 0;
+	font-size: 1.1rem;
+}
+p.lead {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+a {
+	color: $color-primary;
+	text-decoration: none;
+	transition: color .3s ease-out;
+	&:hover {
+		color: darken($color-primary,15%);
+	} 
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
