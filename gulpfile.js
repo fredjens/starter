@@ -70,6 +70,6 @@ gulp.task('scripts', function() {
 
 // Tasks
 
-gulp.task('up', ['browser-sync']);
+gulp.task('up', ['browser-sync','sass']);
 
 gulp.task('default', ['browser-sync']);

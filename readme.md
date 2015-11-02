@@ -4,7 +4,7 @@
 * Bower for frontend dependencies
 * Sassdoc
 
-Install: ```npm i```
+Install ```npm i```
 
-Run: ```gulp up```
+Run ```gulp up```
 
