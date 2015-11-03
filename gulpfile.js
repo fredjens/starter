@@ -15,14 +15,16 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'), 
     uglify = require('gulp-uglify'), 
     //sassdoc = require('sassdoc'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    nunjucksRender = require('gulp-nunjucks-render'),
+    data = require('gulp-data');
 
 // BrowserSync
 
 gulp.task('browser-sync', function() {
     connect.server({}, function (){
         browserSync ({
-            proxy: 'http://localhost:8000/templates'
+            proxy: 'http://localhost:8000/app'
         });
     });
     gulp.watch('scss/*.scss', ['sass']);
@@ -67,6 +69,18 @@ gulp.task('scripts', function() {
     .pipe(concat('main.min.js'))
     .pipe(gulp.dest('js/dist'))
 });
+
+gulp.task('nunjucks', function() {
+    nunjucksRender.nunjucks.configure(['app/templates/']);
+    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    .pipe(data(function() {
+      return require('./app/json/data.json')
+    }))
+    .pipe(nunjucksRender())
+    .pipe(gulp.dest('app'))
+});
+
+
 
 // Tasks
 
