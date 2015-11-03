@@ -8,5 +8,12 @@
   }, {
     "src": "image-three.png",
     "alt": "Image three alt text"
+  }],
+  "persons": [{
+      "name" : "Fredrik"
+    }, {
+      "name" : "Martin"
+    }, {
+      "name" : "Joakim"
   }]
 }

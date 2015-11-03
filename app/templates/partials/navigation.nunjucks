@@ -1,6 +1,7 @@
-<!-- navigation.nunjucks -->
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav>
+{% macro active(activePage='home') %}
+	<nav>
+	 	<a href="/app/index.html" class="{%if activePage == 'home' %} active {% endif %}">Home</a>
+		 <a href="/app/about.html" class="{%if activePage == 'about' %} active {% endif %}">About</a>
+		 <a href="#" class="{%if activePage == 'contact' %} active {% endif %}">Contact</a>
+	</nav>
+{% endmacro %}

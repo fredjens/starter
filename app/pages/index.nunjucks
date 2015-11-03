@@ -1,19 +1,18 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
 
-
 {% block content %} 
-{% import 'macros/navigation.nunjucks' as nav %}
-{{nav.active('home')}}
 
 <h1>Find what you love and let it kill you</h1>
+{% import 'partials/navigation.nunjucks' as nav %}
+{{nav.active('home')}}
 
-<div class="gallery">
-  {% for image in images %}
-  <div class="gallery__item">
-    <img src="{{image.src}}" alt="{{image.alt}}">
-  </div>
-  {% endfor %}
+<div class="persons">
+	{% for person in persons %}
+  	<div class="persons__person">
+    	<h2>{{ person.name }}</h2>
+  	</div>
+  	{% endfor %}
 </div>
 
 {% endblock %}
