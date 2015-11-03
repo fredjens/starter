@@ -29,7 +29,7 @@ gulp.task('browser-sync', function() {
     });
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
-    gulp.watch('templates/*.html').on('change', browserSync.reload);
+    gulp.watch('app/pages/*.nunjucks',['nunjucks']).on('change', browserSync.reload);
 });
 // SASS Compiler
 

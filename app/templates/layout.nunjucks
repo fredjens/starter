@@ -18,7 +18,8 @@
 	<body>
 
   	<!-- You write code for this content block in another file -->
-  	{% block content %} {% endblock %}
+  	{% block content %} 
+  	{% endblock %}
 
 	<footer>
 	</footer>

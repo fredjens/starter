@@ -59,7 +59,7 @@ p.lead {
 }
 
 a {
-	color: $color-primary;
+	color: #fff;
 	text-decoration: none;
 	transition: color .3s ease-out;
 	&:hover {
@@ -72,3 +72,6 @@ ul {
 	list-style: none;
 }
 
+nav a.active {
+	text-decoration: underline;
+}

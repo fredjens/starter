@@ -3,10 +3,10 @@
 
 
 {% block content %} 
-
-<h1>This is the index page</h1>
 {% import 'macros/navigation.nunjucks' as nav %}
 {{nav.active('home')}}
+
+<h1>Find what you love and let it kill you</h1>
 
 <div class="gallery">
   {% for image in images %}
