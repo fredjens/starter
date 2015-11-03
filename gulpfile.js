@@ -4,6 +4,7 @@
 // Dependencies
 
 var gulp = require('gulp'),
+    sassdoc = require('sassdoc'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
@@ -14,7 +15,6 @@ var gulp = require('gulp'),
 	minifyCSS = require('gulp-minify-css'),
     rename = require('gulp-rename'), 
     uglify = require('gulp-uglify'), 
-    //sassdoc = require('sassdoc'),
     gutil = require('gulp-util'),
     nunjucksRender = require('gulp-nunjucks-render'),
     data = require('gulp-data');
@@ -24,7 +24,7 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', function() {
     connect.server({}, function (){
         browserSync ({
-            proxy: 'http://localhost:8000/app'
+            proxy: 'http://localhost:8000/public'
         });
     });
     gulp.watch('scss/*.scss', ['sass']);
@@ -34,7 +34,7 @@ gulp.task('browser-sync', function() {
 // SASS Compiler
 
 gulp.task('sass', function() {
-    return gulp.src('scss/*.scss')
+    return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ 
             style: 'expanded'
@@ -50,7 +50,6 @@ gulp.task('sass', function() {
             cascade: false
         }))
         .pipe(sourcemaps.write())
-        //.pipe(sassdoc())
         .pipe(concat('main.css'))
         .pipe(gulp.dest('css'))
         .pipe(minifyCSS())
@@ -70,20 +69,28 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('js/dist'))
 });
 
+// Nunjucks + JSON
+
 gulp.task('nunjucks', function() {
-    nunjucksRender.nunjucks.configure(['app/templates/']);
-    return gulp.src('app/pages/**/*.+(html|nunjucks)')
+    nunjucksRender.nunjucks.configure(['layout/']);
+    return gulp.src('pages/**/*.+(html|nunjucks)')
     .pipe(data(function() {
-      return require('./app/json/data.json')
+      return require('./json/data.json')
     }))
     .pipe(nunjucksRender())
-    .pipe(gulp.dest('app'))
+    .pipe(gulp.dest('public'))
 });
 
+// Sassdoc
+
+gulp.task('sassdoc', function() {
+    return gulp.src('scss/**/*.scss')
+        .pipe(sassdoc())
+});
 
 
 // Tasks
 
-gulp.task('up', ['browser-sync','sass']);
+gulp.task('up', ['browser-sync','sass','nunjucks']);
 
 gulp.task('default', ['browser-sync']);
