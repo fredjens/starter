@@ -29,7 +29,7 @@ gulp.task('browser-sync', function() {
     });
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
-    gulp.watch('app/pages/*.nunjucks',['nunjucks']).on('change', browserSync.reload);
+    gulp.watch('pages/*.nunjucks',['nunjucks']);
 });
 // SASS Compiler
 
@@ -72,13 +72,14 @@ gulp.task('scripts', function() {
 // Nunjucks + JSON
 
 gulp.task('nunjucks', function() {
-    nunjucksRender.nunjucks.configure(['layout/']);
-    return gulp.src('pages/**/*.+(html|nunjucks)')
+    nunjucksRender.nunjucks.configure(['./layout/']);
+    return gulp.src('./pages/**/*.+(html|nunjucks)')
     .pipe(data(function() {
       return require('./json/data.json')
     }))
     .pipe(nunjucksRender())
     .pipe(gulp.dest('public'))
+    .pipe(browserSync.reload({stream: true}))
 });
 
 // Sassdoc
