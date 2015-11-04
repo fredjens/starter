@@ -1,23 +1,8 @@
 ////
-/// This is a poster comment.
-/// It will apply annotations to all items from file.
+/// @author Netlife Research
 /// @group Typography
-/// @author Hugo Giraudel
 ////
 
-/// This item will have:
-/// `@group API` and `@author Hugo Giraudel`
-/// inherited from the poster.
-@function dummy-function() {
-  // ...
-}
-
-/// This item overrides the `@author` annotation
-/// from the poster; it's not merged with it.
-/// @author Fabrice Weinberg
-@mixin dummy-mixin {
-  // ...
-}
 //------------------------------------------------------
 // TYPOGRAPHY
 //------------------------------------------------------
@@ -37,7 +22,7 @@ body {
 	background: $color-primary;
 }
 
-/// H1 user for frontpage
+
 $h1-font-sizes: (
 	null  	:2rem,
 	small 	:5rem,

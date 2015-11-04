@@ -1,0 +1,13 @@
+{
+  "display": {
+    "access": ["public", "private"],
+    "alias": false,
+    "watermark": false
+  },
+
+  "package": "./package.json",
+  "theme": "neat",
+  "groups": {
+    "undefined": "General"
+  },
+}

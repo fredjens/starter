@@ -16,11 +16,10 @@
 	</head>
 
 	<body>
-
-  	<!-- You write code for this content block in another file -->
+	<main>
   	{% block content %} 
   	{% endblock %}
-
+  	</main>
 	<footer>
 	</footer>
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>

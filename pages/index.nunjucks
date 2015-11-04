@@ -3,16 +3,19 @@
 
 {% block content %} 
 
-<h1>Find what you love and let it kill you</h1>
-{% import 'partials/navigation.nunjucks' as nav %}
-{{nav.active('home')}}
-
-<div class="persons">
-	{% for person in persons %}
-  	<div class="persons__person">
-    	<h2>{{ person.name }}</h2>
-  	</div>
-  	{% endfor %}
-</div>
+<article>
+	<h1>Find what you love and let it kill you</h1>
+	{% import 'partials/navigation.nunjucks' as nav %}
+	{{nav.active('home')}}
+</article>
+<aside>
+	<div class="persons">
+		{% for person in persons %}
+	  	<div class="persons__person">
+	    	<h2>{{ person.name }}</h2>
+	  	</div>
+	  	{% endfor %}
+	</div>
+</aside>
 
 {% endblock %}

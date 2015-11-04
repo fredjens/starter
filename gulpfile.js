@@ -4,7 +4,6 @@
 // Dependencies
 
 var gulp = require('gulp'),
-    sassdoc = require('sassdoc'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     concat = require('gulp-concat'),
@@ -16,6 +15,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'), 
     uglify = require('gulp-uglify'), 
     gutil = require('gulp-util'),
+    sassdoc = require('sassdoc'),
     nunjucksRender = require('gulp-nunjucks-render'),
     data = require('gulp-data');
 
@@ -30,7 +30,9 @@ gulp.task('browser-sync', function() {
     gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
     gulp.watch('pages/*.nunjucks',['nunjucks']);
+    gulp.watch('layout/**/*.nunjucks',['nunjucks']);
 });
+
 // SASS Compiler
 
 gulp.task('sass', function() {
@@ -85,7 +87,7 @@ gulp.task('nunjucks', function() {
 // Sassdoc
 
 gulp.task('sassdoc', function() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('scss/*.scss')
         .pipe(sassdoc())
 });
 

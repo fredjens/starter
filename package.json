@@ -1,6 +1,6 @@
 {
   "name": "Starter",
-  "version": "beta",
+  "version": "1.0.0",
   "description": "Protoyping starter",
   "author": "Fredrik Jensen",
   "license": "MIT",
@@ -28,7 +28,6 @@
     "gulp-watch": "^4.3.5",
     "gulp-wrap": "^0.11.0",
     "node-sass": "3.3.3",
-    "sassdoc": "^2.1.15",
     "vinyl-ftp": "^0.4.5"
   },
   "scripts": {

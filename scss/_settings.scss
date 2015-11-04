@@ -1,14 +1,7 @@
-////
-/// Poster comment
-/// @author Netlife Research
-/// @group Settings
-////
-
 //------------------------------------------------------
 // Colors
 //------------------------------------------------------
 
-/// Color variables
 $color-primary    : seagreen;
 $color-secondary  : blue;
 $color-black      : #000;
@@ -16,6 +9,14 @@ $color-white      : #fff;
 $color-gray       : #333;
 $text-color		    : $color-gray;
 
+//------------------------------------------------------
+// Spacing
+//------------------------------------------------------
+
+$spacing        : 20px;
+$spacing-small  : 10px;
+$spacing-medium : 30px;
+$spacing-large  : 50px;
 
 //------------------------------------------------------
 // Breakpoints and grid
@@ -29,23 +30,15 @@ $breakpoints: (
 );
 
 $susy: (
-  columns: 6,
-  math: fluid,
-  gutters: 44px/151px, // Margin 67 Gutter 44
-  gutter-position: inside-static,
-  global-box-sizing: border-box,
-  //debug: (image: show)
+  columns: 12,
+  gutters: $spacing/70px,
+  output: float,
+  gutter-position: split,
+  //debug: (image: show),
+  column-width: 70px,
+  global-box-sizing: border
 );
 
-
-//------------------------------------------------------
-// Spacing
-//------------------------------------------------------
-
-$spacing 		    : 20px;
-$spacing-small	: 10px;
-$spacing-medium	: 30px;
-$spacing-large	: 50px;
 
 //------------------------------------------------------
 // Typograhpy

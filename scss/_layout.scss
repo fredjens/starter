@@ -2,10 +2,13 @@
 // LAYOUT
 //------------------------------------------------------
 
-
-
-
-
-
-
+main {
+	@include container(auto);
+}
+article {
+	@include span(8 of 12); 
+}
+aside {
+	@include span(4 of 12);
+}
 
