@@ -16,10 +16,12 @@
 	</head>
 
 	<body>
-	<main>
+	<div class="breakpoints"></div>
+	<nav>
+		{% import 'partials/navigation.nunjucks' as nav %}
+	</nav>
   	{% block content %} 
   	{% endblock %}
-  	</main>
 	<footer>
 	</footer>
 	<script src="../bower_components/jquery/dist/jquery.min.js"></script>

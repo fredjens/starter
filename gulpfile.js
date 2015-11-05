@@ -23,15 +23,13 @@ var gulp = require('gulp'),
 
 gulp.task('php', function() {
   connect.server();
-  });
+});
 
 // BrowserSync
 
 gulp.task('browser-sync', function() {
         browserSync.init ({
-            proxy: 'http://localhost:8000/public',
-            port: 3000,
-            notify: false
+            proxy: 'http://localhost:8000/public'
         });
 });
 
@@ -43,7 +41,7 @@ gulp.task('sass', function() {
         .pipe(sass({ 
             style: 'expanded'
             })
-                .on('error', function(err){
+            .on('error', function(err){
                 browserSync.notify(err.message, 10000);
                 this.emit('end');
             })

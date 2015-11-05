@@ -2,11 +2,9 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %} 
-
+{{nav.active('home')}}
 <article>
 	<h1>Find what you love and let it kill you</h1>
-	{% import 'partials/navigation.nunjucks' as nav %}
-	{{nav.active('home')}}
 </article>
 <aside>
 	<div class="persons">
@@ -17,5 +15,4 @@
 	  	{% endfor %}
 	</div>
 </aside>
-
 {% endblock %}

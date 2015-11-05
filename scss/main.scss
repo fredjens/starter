@@ -7,6 +7,8 @@
 
 @import "../bower_components/susy/sass/susy";
 @import "../bower_components/normalize-css/normalize";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic);
 
 /*------------------------------------------------------*/
 // Settings
@@ -29,15 +31,15 @@
 //------------------------------------------------------
 
 .breakpoints {
-    background-color: rgba(0,0,0, 0.6);
-    color: #fff;
+    background-color: rgba(0,0,0, 0.4);
+    color: rgba(255,255,255, 0.5);
     z-index: 999;
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 4px 6px 2px 6px;
+    padding: 4px 8px;
     font-size: 14px;
-    &:before { content: 'Null'}
+    &:before { content: 'Smallest'}
     @include breakpoint(small) { &:before { content: 'Small'} }
 	@include breakpoint(medium) { &:before { content: 'Medium'} }
     @include breakpoint(large) { &:before { content: 'Large'} }

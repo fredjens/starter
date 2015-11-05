@@ -1,10 +1,9 @@
 <!-- index.nunjucks -->
 {% extends "layout.nunjucks" %}
 {% block content %} 
+{{nav.active('about')}}
 
 <h1>What matters most is how well you walk through the fire</h1>
-{% import 'partials/navigation.nunjucks' as nav %}
-{{nav.active('about')}}
 
 <div class="gallery">
 	{% for image in images %}

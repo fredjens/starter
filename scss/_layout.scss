@@ -3,12 +3,25 @@
 //------------------------------------------------------
 
 main {
-	@include container(auto);
+	background: #fff;
 }
 article {
-	@include span(8 of 12); 
+	@include container(800px);
+	padding: 100px 0;
+	margin-top: $spacing;
+	//@include span(8 of 12); 
 }
 aside {
-	@include span(4 of 12);
+	//@include span(4 of 12);
 }
 
+nav {
+	font-size: 2rem;
+	margin-top: 20px;
+	a {
+		display: block;
+	}
+}
+nav a.active {
+	color: darken($color-primary,15%);
+}
