@@ -25,9 +25,11 @@ body {
 
 
 $h1-font-sizes: (
-	null  	:2rem,
-	small 	:5rem,
-	medium	:6rem
+	null  	: 2rem,
+	small 	: 2.5rem,
+	medium	: 3rem,
+	large	: 4rem,
+	wide	: 6rem
 );	
 
 /// H1 styiling
@@ -55,24 +57,29 @@ h2, h3 {
 
 p {
 	font-family: $font-serif;
-	font-size: 1.2rem;
 	margin-top: 0;
 	margin-bottom: 30px;
+	@include breakpoint(medium) {
+		font-size: 1.2rem;
+	}
 }
 p.lead {
-	font-size: 1.6rem;
+	font-size: 1.2rem;
 	font-weight: 400;
+	@include breakpoint(medium) {
+		font-size: 1.6rem;
+	}
 }
 p.small {
 	font-size: 1rem;
 	color:gray;
 }
 a {
-	color: darken($color-primary,10%);
+	color: darken($color-primary,30%);
 	text-decoration: none;
 	transition: color .3s ease-out;
 	&:hover {
-		color: darken($color-primary,15%);
+		color: darken($color-primary,25%);
 	} 
 }
 article a {

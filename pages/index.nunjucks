@@ -3,16 +3,6 @@
 
 {% block content %} 
 {{nav.active('home')}}
-<article>
 	<h1>Find what you love and let it kill you</h1>
-</article>
-<aside>
-	<div class="persons">
-		{% for person in persons %}
-	  	<div class="persons__person">
-	    	<h2>{{ person.name }}</h2>
-	  	</div>
-	  	{% endfor %}
-	</div>
-</aside>
+	<p><a href="https://github.com/fredjens/starter">→ Github</a></p>
 {% endblock %}

@@ -7,7 +7,10 @@ main {
 }
 article {
 	@include container(800px);
-	padding: 100px 0;
+	padding: 10px 20px;
+	@include breakpoint(medium) {
+		padding: 100px 20px;
+	}
 	margin-top: $spacing;
 	//@include span(8 of 12); 
 }
@@ -19,11 +22,12 @@ nav {
 	font-size: 2rem;
 	margin-top: 20px;
 	a {
+		color: darken($color-primary,12.5%);
 		display: block;
 	}
 }
 nav a.active {
-	color: darken($color-primary,15%);
+	color: darken($color-primary,25%);
 }
 h2.pattern {
 	border-bottom: 1px solid darken($color-primary,15%);
