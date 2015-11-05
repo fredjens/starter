@@ -19,18 +19,20 @@ var gulp = require('gulp'),
     nunjucksRender = require('gulp-nunjucks-render'),
     data = require('gulp-data');
 
+// PHP
+
+gulp.task('php', function() {
+  connect.server();
+  });
+
 // BrowserSync
 
 gulp.task('browser-sync', function() {
-    connect.server({}, function (){
-        browserSync ({
-            proxy: 'http://localhost:8000/public'
+        browserSync.init ({
+            proxy: 'http://localhost:8000/public',
+            port: 3000,
+            notify: false
         });
-    });
-    gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
-    gulp.watch('pages/*.nunjucks',['nunjucks']);
-    gulp.watch('layout/**/*.nunjucks',['nunjucks']);
 });
 
 // SASS Compiler
@@ -61,6 +63,15 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({stream: true}))
 });
 
+// watch
+
+gulp.task('watch', function() {
+    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
+    gulp.watch('pages/*.nunjucks',['nunjucks']);
+    gulp.watch('layout/**/*.nunjucks',['nunjucks']);
+})
+
 // JS Compiler
 
 gulp.task('scripts', function() {
@@ -84,16 +95,8 @@ gulp.task('nunjucks', function() {
     .pipe(browserSync.reload({stream: true}))
 });
 
-// Sassdoc
-
-gulp.task('sassdoc', function() {
-    return gulp.src('scss/*.scss')
-        .pipe(sassdoc())
-});
-
 
 // Tasks
 
-gulp.task('up', ['browser-sync','sass','nunjucks']);
+gulp.task('up', ['php','browser-sync','watch','nunjucks']);
 
-gulp.task('default', ['browser-sync']);
