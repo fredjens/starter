@@ -80,3 +80,12 @@
   font-size: calculateRem($size);
 }
 
+// ==============================================================
+// Clearfix
+
+@mixin clearfix {
+    content: " "; 
+    display: block;
+    clear: both;
+}
+

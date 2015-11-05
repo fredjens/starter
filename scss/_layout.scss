@@ -25,3 +25,7 @@ nav {
 nav a.active {
 	color: darken($color-primary,15%);
 }
+h2.pattern {
+	border-bottom: 1px solid darken($color-primary,15%);
+	margin-bottom: 20px;
+}

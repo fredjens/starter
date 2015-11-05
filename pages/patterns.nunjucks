@@ -1,0 +1,23 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+{% block content %} 
+{{nav.active('about')}}
+
+<h2 class="pattern">Cards</h2>
+
+	{% for card in cards %}
+	<div class="card">
+		<div class="card__image">
+			<img src="{{ card.image }}" alt="{{ card.alt }}" />
+		</div>
+		<div class="card__content">
+			<div class="card__category">Article</div>
+			<h2 class="card__title">Sky Blue Sky</h2>
+			<p class="card__lead">Jeff Tweedy's restlessness has always been one of his greatest strengths.</p>
+			<div class="card__author">by <a>Mr. Jones</a></div>
+		</div>
+		<div class="card__more">Read article</div>
+	</div>
+  	{% endfor %}
+
+{% endblock %}

@@ -1,14 +1,18 @@
 {
-  "images": [{
-    "src": "image-one.png",
+  "cards": [{
+    "image": "../images/photo-1.jpg",
     "alt": "Image one alt text"
   }, {
-    "src": "image-two.png",
+    "image": "../images/photo-2.jpg",
     "alt": "Image two alt text"
   }, {
-    "src": "image-three.png",
+    "image": "../images/photo-3.jpg",
+    "alt": "Image two alt text"
+  }, {
+    "image": "../images/photo-4.jpg",
     "alt": "Image three alt text"
   }],
+
   "persons": [{
       "name" : "Charles Bukowski"
     }, {
@@ -16,4 +20,5 @@
     }, {
       "name" : "Alan Kaufman"
   }]
+
 }
