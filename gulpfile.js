@@ -63,12 +63,6 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('sass-test', function() {
-    return gulp.src('./scss/main.scss')
-        .pipe(sass({ style: 'expanded' })).on('error', errorHandler)
-        .pipe(autoprefixer('> 5%', 'last 2 version', 'ie 9'))
-        .pipe(gulp.dest('./css/'))
-});
 // watch
 
 gulp.task('watch', function() {
@@ -104,5 +98,5 @@ gulp.task('nunjucks', function() {
 
 // Tasks
 
-gulp.task('up', ['php','browser-sync','watch','nunjucks']);
+gulp.task('up', ['php','browser-sync','sass','watch','nunjucks']);
 
