@@ -15,14 +15,16 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'), 
     uglify = require('gulp-uglify'), 
     gutil = require('gulp-util'),
-    sassdoc = require('sassdoc'),
+    //sassdoc = require('sassdoc'),
     nunjucksRender = require('gulp-nunjucks-render'),
     data = require('gulp-data');
 
 // PHP
 
 gulp.task('php', function() {
-  connect.server();
+  connect.server({
+    keepalive: false
+  });
 });
 
 // BrowserSync
@@ -61,6 +63,12 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task('sass-test', function() {
+    return gulp.src('./scss/main.scss')
+        .pipe(sass({ style: 'expanded' })).on('error', errorHandler)
+        .pipe(autoprefixer('> 5%', 'last 2 version', 'ie 9'))
+        .pipe(gulp.dest('./css/'))
+});
 // watch
 
 gulp.task('watch', function() {
