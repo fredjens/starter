@@ -15,4 +15,3 @@ logs/*
 node_modules
 npm-debug.log
 bower_components
-css
