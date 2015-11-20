@@ -1,0 +1,184 @@
+<!doctype html>
+<html class="sg">
+
+<head>
+  <meta charset="utf-8">
+  <title>Styledown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.js"></script>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/styledown/styledown/v1.0.2/data/styledown.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="sg">
+  <div class="sg-container" style="max-width: 1200px; margin: 0 auto;">
+    <h1 id="styleguide" class="sg">Styleguide</h1>
+    <p class="sg">Style and components library.</p>
+    <ul class="sg">
+      <li class="sg">Content:
+        <a href="#styles" class="sg">Styles</a>,
+        <a href="#buttons" class="sg">Buttons</a>,
+        <a href="#styles" class="sg">Styles</a>,
+        <a href="#table" class="sg">Table</a>
+      </li>
+    </ul>
+    <section class="sg-section sg-section-styles">
+      <h2 id="styles" class="sg">Styles</h2>
+      <section class="sg-block sg-section-colors">
+        <div class="sg-text">
+          <h3 id="colors" class="sg">Colors</h3>
+          <p class="sg">Colors are used for functions.
+            <code class="sg">$color-success: #67898</code>
+            <br class="sg">
+            <code class="sg">$color-success: #67898</code>
+            <br class="sg">
+            <code class="sg">$color-success: #67898</code>
+          </p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="sg-color">
+              <div class="sg-color__swatch color-info"></div>
+              <div class="sg-color__swatch color-success"></div>
+              <div class="sg-color__swatch color-warning"></div>
+              <div class="sg-color__swatch color-danger"></div>
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-color&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-color__swatch color-info&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-color__swatch color-success&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-color__swatch color-warning&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-color__swatch color-danger&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+      <section class="sg-block sg-section-typography">
+        <div class="sg-text">
+          <h3 id="typography" class="sg">Typography</h3>
+          <p class="sg">Font is Gotham.
+            <br class="sg">
+            <code class="sg">$font-sans--light</code>
+            <br class="sg">
+            <code class="sg">$font-sans--book</code>
+            <br class="sg">
+            <code class="sg">$font-sans--medium</code>
+            <br class="sg">
+            <code class="sg">$font-sans--bold</code>
+          </p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <div class="sg-typo gotham-book">ABCDEFGHIJKLMOPQRSTUVWXYZ&#xC6;&#xD8;&#xC5;
+              <br>abcdefghijklmnopqrsyuvwxyz&#xE6;&#xF8;&#xE5;
+              <br>123456789!&quot;#$%&amp;/()
+            </div>
+            <div class="sg-typo gotham-bold">ABCDEFGHIJKLMOPQRSTUVWXYZ&#xC6;&#xD8;&#xC5;
+              <br>abcdefghijklmnopqrsyuvwxyz&#xE6;&#xF8;&#xE5;
+              <br>123456789!&quot;#$%&amp;/()
+            </div>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-typo gotham-book&quot;</span>&gt;</span>ABCDEFGHIJKLMOPQRSTUVWXYZ&#xC6;&#xD8;&#xC5;
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>abcdefghijklmnopqrsyuvwxyz&#xE6;&#xF8;&#xE5;
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>123456789!&quot;#$%&amp;/()
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;sg-typo gotham-bold&quot;</span>&gt;</span>ABCDEFGHIJKLMOPQRSTUVWXYZ&#xC6;&#xD8;&#xC5;
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>abcdefghijklmnopqrsyuvwxyz&#xE6;&#xF8;&#xE5;
+  <span class="hljs-tag">&lt;<span class="hljs-title">br</span> /&gt;</span>123456789!&quot;#$%&amp;/()
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
+    <section class="sg-section sg-section-buttons">
+      <h2 id="buttons" class="sg">Buttons</h2>
+      <section class="sg-block sg-section-large-buttons">
+        <div class="sg-text">
+          <h3 id="large-buttons" class="sg">Large buttons</h3>
+          <p class="sg">Create your buttons with a
+            <code class="sg">.button</code>class.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <a class="button">Button</a>
+            <a class="button button--success">Success button</a>
+            <a class="button button--warning">Warning button</a>
+            <a class="button button--danger">Danger button</a>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--success&quot;</span>&gt;</span>Success button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--warning&quot;</span>&gt;</span>Warning button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--danger&quot;</span>&gt;</span>Danger button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+        </div>
+      </section>
+      <section class="sg-block sg-section-small-buttons">
+        <div class="sg-text">
+          <h3 id="small-buttons" class="sg">Small buttons</h3>
+          <p class="sg">Create your buttons with a
+            <code class="sg">.button</code>class.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <a class="button">Button</a>
+            <a class="button button--small button--success">Success button</a>
+            <a class="button button--small button--warning">Warning button</a>
+            <a class="button button--small button--danger">Danger button</a>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>Button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--small button--success&quot;</span>&gt;</span>Success button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--small button--warning&quot;</span>&gt;</span>Warning button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;button button--small button--danger&quot;</span>&gt;</span>Danger button<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
+    <section class="sg-section sg-section-table">
+      <h2 id="table" class="sg">Table</h2>
+      <section class="sg-block sg-section-module">
+        <div class="sg-text">
+          <h3 id="module" class="sg">Module</h3>
+          <p class="sg">
+            <code class="sg">.table</code>- tables are styled nicely for you. Just add the class
+            <code class="sg">.table</code>.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <table>asdf</table>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>asdf<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
+    <section class="sg-section sg-section-table">
+      <h2 id="table" class="sg">Table</h2>
+      <section class="sg-block sg-section-module">
+        <div class="sg-text">
+          <h3 id="module" class="sg">Module</h3>
+          <p class="sg">
+            <code class="sg">.table</code>- tables are styled nicely for you. Just add the class
+            <code class="sg">.table</code>.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <table>asdf</table>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>asdf<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
+    <section class="sg-section sg-section-charts">
+      <h2 id="charts" class="sg">Charts</h2>
+      <section class="sg-block sg-section-module">
+        <div class="sg-text">
+          <h3 id="module" class="sg">Module</h3>
+          <p class="sg">
+            <code class="sg">.table</code>- tables are styled nicely for you. Just add the class
+            <code class="sg">.table</code>.</p>
+        </div>
+        <div class="sg-example">
+          <div class="sg-canvas">
+            <table>asdf</table>
+          </div><pre class="sg-code"><span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>asdf<span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span></pre>
+        </div>
+      </section>
+    </section>
+
+  </div>
+</body>
+
+</html>

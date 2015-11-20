@@ -16,9 +16,6 @@
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.3",
-    "gulp-watch": "^4.3.5",
-    "gulp-sourcemaps": "^1.6.0",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.5.2",
     "gulp-connect-php": "^0.0.5",
@@ -28,13 +25,15 @@
     "gulp-nunjucks-render": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-styledown": "0.0.2",
     "gulp-uglify": "^1.2.0",
     "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.5",
     "vinyl-ftp": "^0.4.5"
   },
   "scripts": {
     "postinstall": "bower install && gulp up"
   }
 }
-
-

@@ -1,7 +1,0 @@
-{% macro active(activePage='home') %}
-	<nav>
-	 	<a href="/public/index.html" class="{%if activePage == 'home' %} active {% endif %}">Starter</a>
-		<a href="/public/patterns.html" class="{%if activePage == 'about' %} active {% endif %}">Readymades</a>
-		<a href="/public/typo.html" class="{%if activePage == 'typo' %} active {% endif %}">Typography boilerplate</a>
-	</nav>
-{% endmacro %} 

@@ -1,10 +1,18 @@
 # Starter
 
-* Gulp + Browsersync
-* Bower for frontend dependencies
-* Sassdoc
+## Gulp + Browsersync
+On buildt in PHP server.
+Browsersync with libsass and autoprefixer
+
+## Static site generator
+With JSON and Nunjucks
+https://mozilla.github.io/nunjucks/
+
+## Styleguide
+Styleguide generated with styledown
 
 Install ```npm i```
 
-Run ```gulp up```
+Styleguide ```gulp styleguide```
+Run ```gulp```
 
