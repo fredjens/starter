@@ -23,7 +23,8 @@ var gulp = require('gulp'),
 
 gulp.task('php', function() {
   connect.server({
-    keepalive: false
+    keepalive: false,
+    base: './dist'
   });
 });
 
@@ -31,7 +32,7 @@ gulp.task('php', function() {
 
 gulp.task('browser-sync', function() {
         browserSync.init ({
-            proxy: 'http://localhost:8000/dist'
+            proxy: 'localhost:8000',
         });
 });
 
