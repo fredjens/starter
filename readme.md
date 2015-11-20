@@ -1,14 +1,14 @@
 # Starter
 
-## Gulp + Browsersync
+### Gulp + Browsersync
 On buildt in PHP server.
 Browsersync with libsass and autoprefixer
 
-## Static site generator
+### Static site generator
 With JSON and Nunjucks
 https://mozilla.github.io/nunjucks/
 
-## Styleguide
+### Styleguide
 Styleguide generated with styledown
 
 Install ```npm i```
