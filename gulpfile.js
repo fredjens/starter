@@ -17,7 +17,9 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),   
     styledown = require('gulp-styledown'),
     nunjucksRender = require('gulp-nunjucks-render'),
-    data = require('gulp-data');
+    data = require('gulp-data'),
+    newer = require('gulp-newer'),
+    imagemin = require('gulp-imagemin');
 
 // PHP
 
@@ -64,16 +66,6 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({stream: true}))
 });
 
-// watch
-
-gulp.task('watch', function() {
-    gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
-    gulp.watch('src/layout/**/*.nunjucks',['nunjucks']);
-    gulp.watch('src/pages/*.nunjucks',['nunjucks']);
-    gulp.watch('styledown/**/*.md',['styledown']);
-})
-
 // JS Compiler
 
 var bower = 'bower_components/';
@@ -113,9 +105,31 @@ gulp.task('styledown', function() {
     .pipe(gulp.dest('dist/styleguide/'));
 });
 
+// Copy images to dist
+
+var imgSrc = 'src/images/**';
+var imgDest = 'dist/images';
+gulp.task('images', function() {
+   return gulp.src(imgSrc)
+      .pipe(newer(imgDest))
+      .pipe(imagemin())
+      .pipe(gulp.dest(imgDest)); 
+});
+
+
+// watch
+
+gulp.task('watch', function() {
+    gulp.watch('scss/*.scss', ['sass']);
+    gulp.watch('js/*.js', [ 'scripts' ]).on('change', browserSync.reload);
+    gulp.watch('src/layout/**/*.nunjucks',['nunjucks']);
+    gulp.watch('src/pages/*.nunjucks',['nunjucks']);
+    gulp.watch('styledown/**/*.md',['styledown']);
+    gulp.watch(imgSrc, ['images']);
+})
 
 // Tasks
 
 gulp.task('styleguide', ['sass','styledown']);
-gulp.task('default', ['php','browser-sync','sass','watch','nunjucks']);
+gulp.task('default', ['php','images','browser-sync','sass','watch','nunjucks']);
 

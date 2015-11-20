@@ -19,7 +19,7 @@
 	<body>
 	<div class="breakpoints"></div>
 	<nav>
-		{% import 'partials/navigation.nunjucks' as nav %}	</nav>
+	{% import 'partials/navigation.nunjucks' as nav %}	</nav>
   	{% block content %} 
   	{% endblock %}
 	<footer>
